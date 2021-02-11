@@ -3,17 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>FutsalLink</title>
+    <title>Futsal</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-  	<link href="css/reset.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="assets/styles/toppage.scss">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class='main-container'>
+      <div class='top-wrapper'>
+        <%= render 'shared/header' %>
+      </div>
+      <%= yield %>
+      <%= render 'shared/footer' %>
+    </div>  
   </body>
 </html>
